@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gautam Kumar Jha - Stock Market Learning Community</title>
+<meta name="theme-color" content="#04120c">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1576917984454323');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1576917984454323&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #04120c;
+    --card: #08201a;
+    --card2: #0a2a1d;
+    --border: #1b4a35;
+    --text: #eef5ee;
+    --muted: #a9bfb0;
+    --gold: #f0c96a;
+    --lime: #b5ef6d;
+    --mint: #4fe3b0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { background: var(--bg); }
+  body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    background:
+      radial-gradient(900px 420px at 50% -80px, rgba(46,160,90,.28), transparent 70%),
+      linear-gradient(180deg, #04120c 0%, #06190f 50%, #04120c 100%);
+    display: flex;
+    justify-content: center;
+  }
+  .wrap { width: 100%; max-width: 420px; padding: 14px 12px 40px; }
+
+  /* top bar */
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; padding: 4px 2px 14px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: linear-gradient(135deg, #8bea7a, #4fe3b0);
+    color: #05220f; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    letter-spacing: .5px;
+  }
+  .brand span { font-size: 12px; letter-spacing: .16em; color: var(--muted); font-weight: 500; }
+  .pill-top {
+    display: flex; align-items: center; gap: 7px;
+    border: 1px solid #2a6a47; border-radius: 999px;
+    padding: 8px 12px; font-size: 10.5px; letter-spacing: .14em;
+    color: #9fe6b6; font-weight: 500; white-space: nowrap;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #5be08a; box-shadow: 0 0 8px #5be08a; }
+
+  /* cards */
+  .card {
+    background: linear-gradient(165deg, var(--card2) 0%, var(--card) 55%, #061a13 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px 16px 20px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .eyebrow {
+    color: var(--gold); font-weight: 700; font-size: 11.5px;
+    letter-spacing: .14em; line-height: 1.6; text-transform: uppercase;
+    padding: 0 10px;
+  }
+  h1 {
+    margin-top: 22px;
+    font-size: clamp(36px, 11.5vw, 46px);
+    line-height: 1.04; font-weight: 800; letter-spacing: .01em;
+    text-transform: uppercase;
+  }
+  h1 .w { display: block; color: var(--text); }
+  h1 .g { display: block; color: var(--lime); }
+  .desc {
+    margin: 16px auto 0; max-width: 330px;
+    color: var(--muted); font-size: 15px; line-height: 1.55;
+  }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .chip {
+    border: 1px solid #2a5a43; border-radius: 999px;
+    padding: 9px 13px; font-size: 11.5px; letter-spacing: .04em;
+    color: #d9e8dc; font-weight: 500; text-transform: uppercase;
+    background: rgba(255,255,255,.02);
+  }
+
+  /* button */
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    width: 100%; margin-top: 22px; padding: 18px 12px;
+    border-radius: 14px; text-decoration: none;
+    background: linear-gradient(90deg, #c5f26e 0%, #62e6b4 50%, #f2d98a 100%);
+    color: #06220f; font-weight: 800; font-size: 16px; letter-spacing: .03em;
+    box-shadow: 0 6px 0 #2c6b3c, 0 10px 26px rgba(98,230,180,.25);
+    animation: bob 1.8s ease-in-out infinite;
+    position: relative; overflow: hidden;
+  }
+  .cta::after {
+    content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent);
+    transform: skewX(-20deg); animation: shine 2.6s infinite;
+  }
+  .cta svg { width: 22px; height: 22px; flex: none; }
+  .cta .arrow { font-size: 15px; }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+  @keyframes shine { 0% { left: -60%; } 55%,100% { left: 130%; } }
+  .tap { margin-top: 18px; font-size: 12.5px; color: #8fa89a; }
+
+  /* section 2 */
+  .sec { text-align: left; padding: 20px 14px 16px; }
+  .sec h2 {
+    color: var(--gold); font-size: 13px; letter-spacing: .14em;
+    font-weight: 700; text-transform: uppercase; margin-bottom: 14px;
+  }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .item {
+    border: 1px solid #1f4e38; border-radius: 14px; padding: 14px 12px;
+    background: rgba(255,255,255,.02);
+  }
+  .item b { display: block; color: var(--mint); font-size: 12px; letter-spacing: .1em; margin-bottom: 8px; }
+  .item h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+  .item p { font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+
+  .disc {
+    margin-top: 6px; font-size: 11px; line-height: 1.6; color: #6f877a; text-align: center; padding: 0 6px;
+  }
+  .foot { margin-top: 12px; font-size: 11px; color: #567061; text-align: center; letter-spacing: .08em; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="brand"><div class="logo">GJ</div><span>MARKET LEARNING</span></div>
+      <div class="pill-top"><i class="dot"></i>TELEGRAM COMMUNITY</div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Understand the market · Learn with discipline</div>
+
+      <h1><span class="w">Gautam</span><span class="g">Kumar Jha</span></h1>
+
+      <p class="desc">Explore stock market foundations, chart-reading concepts and practical habits for a more informed, risk-aware learning journey.</p>
+
+      <div class="chips">
+        <span class="chip">Market Basics</span>
+        <span class="chip">Chart Concepts</span>
+        <span class="chip">Risk Awareness</span>
+      </div>
+
+      <a class="cta" id="joinTop" href="https://t.me/+c_XH0JHp5rE5NzM1">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 3.3 2.6 10.8c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.2.6.1.9.8.9.5 0 .8-.2 1.1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.3-15.6c.3-1.3-.5-1.9-1.6-1.7zM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.3-1.9-4.7z"/></svg>
+        JOIN TELEGRAM <span class="arrow">↗</span>
+      </a>
+      <div class="tap">Tap to open the Telegram invite</div>
+    </div>
+
+    <div class="card sec">
+      <h2>Inside the learning space</h2>
+      <div class="grid">
+        <div class="item"><b>01</b><h3>Market Basics</h3><p>Understand how the stock market works, step by step.</p></div>
+        <div class="item"><b>02</b><h3>Chart Concepts</h3><p>Learn to read candles, trends and key price levels.</p></div>
+        <div class="item"><b>03</b><h3>Risk Awareness</h3><p>Build habits around risk, discipline and patience.</p></div>
+        <div class="item"><b>04</b><h3>Daily Learning</h3><p>Regular educational updates to keep you consistent.</p></div>
+      </div>
+
+      <a class="cta" id="joinBottom" href="https://t.me/+c_XH0JHp5rE5NzM1" style="margin-top:18px;">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 3.3 2.6 10.8c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.2.6.1.9.8.9.5 0 .8-.2 1.1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.3-15.6c.3-1.3-.5-1.9-1.6-1.7zM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.3-1.9-4.7z"/></svg>
+        JOIN TELEGRAM <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <p class="disc">
+      Disclaimer: This community is for educational purposes only. Stock market investments are subject to market risk. Nothing shared here is investment advice or a guarantee of returns. Please do your own research before making any decision.
+    </p>
+    <div class="foot">© Gautam Kumar Jha</div>
+  </div>
+
+  <script>
+    function trackLead() { if (typeof fbq === 'function') { fbq('track', 'Lead'); } }
+    document.getElementById('joinTop').addEventListener('click', trackLead);
+    document.getElementById('joinBottom').addEventListener('click', trackLead);
+  </script>
+</body>
+</html>
